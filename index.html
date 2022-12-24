@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e330da5781.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/bootstrap.css">
+  <link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon">
+  <title>Syeif Sultoni Akbar</title>
+</head>
+<body class="text-light n-dark">
+  <!-- NavBar -->
+  <nav id="home" class="navbar navbar-expand-lg navbar-dark bg-dark n-gone">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fa-regular fa-user fa-xl d-inline-block" style="margin-right: 5px;"></i>
+        SG Studio</a>
+        <div>
+          <div class="navbar-nav" id="navbarNav">
+            <a class="nav-link" aria-current="page" href="#perkenalan">Perkenalan</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skill">Skill</a>
+            <a class="nav-link" href="#project">Project</a>
+            <a class="nav-link" href="#hobby">Hobby</a>
+            <!-- <a class="nav-link disabled">Disabled</a> -->
+          </div>
+        </div>
+        <div id="iconmed" class="d-flex text-light">
+          <div onclick="opens(1)" class="n-sosmed"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+          <div onclick="opens(2)" class="n-sosmed"><i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+          <div onclick="opens(3)" class="n-sosmed"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+          <div onclick="opens(4)" class="n-sosmed"><i class="fa-brands fa-github fa-2xl"></i></div>
+        </div>
+        <button onclick="sidebar()" class="navbar-toggler" id="mobile-btn">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+  </nav>
+  <!-- sidebar -->
+  <div class="n-sidebar n-side-dark" id="sidebar">
+    <center style="margin-top: 10px;">
+      <button onclick="opens(1)" class="sbtn btn btn-dark"><i class="fa-brands fa-instagram"></i> Instagram</button>
+      <button onclick="opens(2)" class="sbtn btn btn-dark"><i class="fa-brands fa-whatsapp"></i> Whatsapp</button>
+      <button onclick="opens(3)" class="sbtn btn btn-dark"><i class="fa-brands fa-facebook"></i> Facebook</button>
+      <button onclick="opens(4)" class="sbtn btn btn-dark"><i class="fa-brands fa-github"></i> Github</button>
+    </center>
+  </div>
+  <!-- changemode -->
+  <button onclick="change()" class="text-light" id="changemode"><i class="fa-solid fa-sun fa-xl"></i></button>
+  <button class="text-light btn btn-primary" style="opacity: 0;" onclick="window.location.replace(`#home`)" id="upup"><i class="fa-solid fa-arrow-up fa-xl"></i></button>
+  <!-- Perkenalan -->
+  <center id="perkenalan" style="margin-top: -500px;">
+    <img src="./assets/logo.jpeg" alt="Icon" data-tilt data-tilt-full-page-listening>
+    <h2 id="names" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-scale="1.1"></h2>
+    <table id="running-text" style="margin-top: -50px; opacity: 0;">
+      <tr>
+        <td><p id="text">I AM Full Stack Developer</p></td>
+        <td class="cursors" id="cursors"><p>|</p></td>
+      </tr>
+    </table>
+    <div style="opacity: 0; margin-top: -50px;" id="mouse" class="mouse-icon mouse-icon-light"><div class="wheel"></div></div>
+  </center>
+  <canvas width="0" id="devider"></canvas>
+  <div id="mainMenu" style="display: none;">
+    <center id="about">
+      <h3>About</h3>
+      <div class="about"  data-tilt>
+        <div class="n-about about-anim about-show n-about-dark">
+          <canvas height="0.4" width="0"></canvas>
+          <table>
+            <tr>
+              <td><img src="./assets/logo.jpeg" alt="My Potho"></td>
+              <td><p id="aboutText"></p></td>
+            </tr>
+          </table>
+          <canvas height="0.5" width="0"></canvas>
+        </div>
+      </div>
+    </center>
+    <center class="skill" id="skill">
+      <h2 style="margin-top: 50px;">Skills</h2>
+      <div class="n-skills skill-anim skill-show n-about-dark">
+        <canvas height="0.5" width="0"></canvas>
+        <table>
+          <tr>
+            <td><img src="./assets/html.png" alt="HTML" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/react.png" alt="ReactJS" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/bash.png" alt="Bash" data-tilt data-tilt-scale="1.1"></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/css.png" alt="CSS" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/javascript.png" alt="Java Script" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/node.png" alt="NodeJS" data-tilt data-tilt-scale="1.1"></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/cpp.png" alt="Cpp" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/python.webp" alt="Python" data-tilt data-tilt-scale="1.1"></td>
+            <td><img src="./assets/bootstrap.png" alt="Bootstrap" data-tilt data-tilt-scale="1.1"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><img src="./assets/php.png" alt="PHP" data-tilt data-tilt-scale="1.1"></td>
+          </tr>
+        </table>
+        <canvas height="0.4" width="0"></canvas>
+      </div>
+    </center>
+    <center><h2 style="margin-top: 50px;">Project</h2></center>
+      <center class="project" id="project">
+        <div class="project-anim project-show">
+          <table class="n-card">
+            <tr>
+              <td><div onclick="opens(5)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/Riverz.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Riverz</h5>
+                  <p class="card-text">Website Chat dengan Realtime Database</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(6)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/MyShell.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">My Shell</h5>
+                  <p class="card-text">Linux Evernioment dengan nodejs dan berisi tools yang berguna</p>
+                </div>
+              </div></td>
+              <td><div  onclick="opens(7)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/Portofolio.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Portofolio</h5>
+                  <p class="card-text">Tidak lain adalah web ini</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(8)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/Mtk.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Mtk Python</h5>
+                  <p class="card-text">Alat Hitung volume dengan python</p>
+                </div>
+              </div></td>
+            </tr>
+            <tr>
+              <td><div onclick="opens(9)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/sgstudio.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Sg Studio</h5>
+                  <p class="card-text">Komunitas Games dan tempat Nongkrong</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(10)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/gwbm.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Games Wabot Monitor</h5>
+                  <p class="card-text">website untuk monitoring bot wa</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(11)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/gatotkaca.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Gatotkaca</h5>
+                  <p class="card-text">Hanya Website Experiment</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(12)" class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/sgbrowser.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">SG Browser</h5>
+                  <p class="card-text">Browser Jaman Majapahit</p>
+                </div>
+              </div></td>
+            </tr>
+          </table>
+        </div>
+      </center>
+      <center><h2 style="margin-top: 50px;">Hobby</h2></center>
+      <center class="hobby" id="hobby">
+        <div class="hobby-anim hobby-show">
+          <table class="n-card">
+            <tr>
+              <td><div class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/batminton.jpg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Batminton</h5>
+                  <p class="card-text">Saya Suka bermain Batminton</p>
+                </div>
+              </div></td>
+              <td><div class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/games.jpeg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Games</h5>
+                  <p class="card-text">Game Favorit Saya adalah Minecraft</p>
+                </div>
+              </div></td>
+              <td><div class="card bg-dark text-light" style="width: 18rem;" data-tilt>
+                <img src="./assets/coding.jpeg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Coding</h5>
+                  <p class="card-text">Enjoying Coder`s</p>
+                </div>
+              </div></td>
+            </tr>
+          </table>
+        </div>
+      </center>
+      <canvas height="1" width="0"></canvas>
+    <center><h5>Copyright 2022 By Syeif Gamer1015</h5>
+    <p>Made In Indonesia ❤️</p></center>
+  </div>
+  <!-- javascript -->
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/vanilla-tilt.js"></script>
+  <script src="./scripts/bootstrap.js"></script>
+</body>
+</html>

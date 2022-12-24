@@ -1,0 +1,425 @@
+.n-dark {
+  background-color: rgb(53, 53, 53);
+}
+
+.n-light {
+  background-color: rgb(236, 236, 236);
+}
+
+nav {
+  transition: ease 0.5s;
+  -webkit-transition: ease 0.5s;
+  -moz-transition: ease 0.5s;
+  -ms-transition: ease 0.5s;
+  -o-transition: ease 0.5s;
+}
+body {
+  transition: ease-in 0.5s;
+  -webkit-transition: ease-in 0.5s;
+  -moz-transition: ease-in 0.5s;
+  -ms-transition: ease-in 0.5s;
+  -o-transition: ease-in 0.5s;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.n-gone {
+  opacity: 0;
+}
+
+#names {
+  cursor: default;
+}
+
+#perkenalan img{
+  animation-name: shadows;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  max-height: 110px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#perkenalan h2 {
+  margin-top: 10px;
+}
+
+#perkenalan {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+#perkenalan table {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+@keyframes shadows {
+  0% {box-shadow: 0px 0px 10px 5px rgb(30, 135, 255);}
+  10% {box-shadow: 0px 0px 12.5px 7.5px rgb(30, 135, 255);}
+  20% {box-shadow: 0px 0px 15px 10px rgb(30, 135, 255);}
+  30% {box-shadow: 0px 0px 17.5px 12.5px rgb(30, 135, 255);}
+  40% {box-shadow: 0px 0px 20px 15px rgb(30, 135, 255);}
+  50% {box-shadow: 0px 0px 21px 16px rgb(30, 135, 255);}
+  60% {box-shadow: 0px 0px 20px 15px rgb(30, 135, 255);}
+  70% {box-shadow: 0px 0px 17.5px 12.5px rgb(30, 135, 255);}
+  80% {box-shadow: 0px 0px 15px 10px rgb(30, 135, 255);}
+  90% {box-shadow: 0px 0px 12.5px 7.5px rgb(30, 135, 255);}
+  100% {box-shadow: 0px 0px 10px 5px rgb(30, 135, 255);}
+}
+
+.n-block {
+  background-color: rgb(7,100,212);
+}
+
+.cursors {
+  animation-name: curdesc;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes curdesc {
+  0% {opacity: 0;}
+  50% {opacity: 100;}
+  100% {opacity: 0;}
+}
+
+.n-about {
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.n-about-dark {
+  background-color: #424746;
+}
+
+.n-about-light {
+  background-color: #c5c5c5;
+}
+
+
+.n-about table tr td img {
+  margin-top: 10px;
+  border-radius: 20%;
+  max-width: 150px;
+  height: auto;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+}
+
+.n-about table tr td p {
+  margin-left: 10px;
+  max-width: 60rem;
+}
+
+.about-show {
+  opacity: 1;
+}
+
+.about-hidden {
+  opacity: 0;
+}
+
+.about-anim {
+  transition: ease 2.5s;
+  -webkit-transition: ease 2.5s;
+  -moz-transition: ease 2.5s;
+  -ms-transition: ease 2.5s;
+  -o-transition: ease 2.5s;
+}
+
+.n-skills {
+  max-width: fit-content;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.n-skills table tr td img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.n-skills table tr td img:hover {
+  box-shadow: 0px 0px 10px 5px rgb(253, 253, 253);
+}
+
+.skill-anim {
+  transition: ease 2.5s;
+  -webkit-transition: ease 2.5s;
+  -moz-transition: ease 2.5s;
+  -ms-transition: ease 2.5s;
+  -o-transition: ease 2.5s;
+}
+
+.skill-show {
+  opacity: 1;
+}
+
+.skill-hidden {
+  opacity: 0;
+}
+
+#changemode {
+  float: left;
+  position: absolute;
+  transition: all 0.5s;
+  margin-top: 5px;
+  margin-right: 10px;
+  border-color: #00000000;
+  background-color: #00000000;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+#upup {
+  /* background-color: #00000000; */
+  bottom: 0;
+  border-radius: 20%;
+  right: 0;
+  position: fixed;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+  z-index: 100;
+}
+
+.n-sidebar {
+  transition: ease 0.2s;
+  position: fixed;
+  right: -500px;
+  height: 100%;
+  width: 180px;
+  -webkit-transition: ease 0.2s;
+  -moz-transition: ease 0.2s;
+  -ms-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  z-index: 200;
+}
+
+.n-side-dark {
+  background-color: rgb(26, 26, 26);
+}
+.n-side-light {
+  background-color: rgb(241, 241, 241);
+}
+
+.n-sidebar-show {
+  right: 0;
+}
+
+.n-sidebar center button{
+  margin-bottom: 20px;
+}
+
+.n-card tr td {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.n-card tr td div:hover {
+  box-shadow:0 10px 16px 0 rgba(255, 255, 255, 0.205),0 6px 20px 0 rgba(255, 255, 255, 0.438) !important;
+}
+
+.pshadow:hover {
+  box-shadow:0 10px 16px 0 rgba(255, 255, 255, 0.205),0 6px 20px 0 rgba(255, 255, 255, 0.438) !important;
+}
+
+.project {
+  width: auto;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+.project-anim {
+  transition: ease 2.5s;
+  -webkit-transition: ease 2.5s;
+  -moz-transition: ease 2.5s;
+  -ms-transition: ease 2.5s;
+  -o-transition: ease 2.5s;
+}
+
+.project-show {
+  opacity: 1;
+}
+
+.project-hidden {
+  opacity: 0;
+}
+
+.hobby-anim {
+  transition: ease 2.5s;
+  -webkit-transition: ease 2.5s;
+  -moz-transition: ease 2.5s;
+  -ms-transition: ease 2.5s;
+  -o-transition: ease 2.5s;
+}
+
+.hobby-show {
+  opacity: 1;
+}
+
+.hobby-hidden {
+  opacity: 0;
+}
+
+.hobby {
+  width: auto;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* ---------------------------------------------- /*
+ * Mouse animate icon
+/* ---------------------------------------------- */
+.mouse-icon {
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+.mouse-icon-light {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 16px;
+  height: 40px;
+  width: 24px;
+  display: block;
+  z-index: 10;
+  opacity: 0.7;
+}
+.mouse-icon-dark {
+  border: 2px solid rgb(32, 32, 32);
+  border-radius: 16px;
+  height: 40px;
+  width: 24px;
+  display: block;
+  z-index: 10;
+  opacity: 0.7;
+}
+.mouse-icon .wheel {
+  -webkit-animation-name: drop;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.mouse-icon-light .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  width: 2px;
+  height: 6px;
+  top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mouse-icon-dark .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: rgb(32, 32, 32);
+  width: 2px;
+  height: 6px;
+  top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@-webkit-keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+@keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+.n-sosmed {
+  border-radius: 15px;
+  margin-left: 1rem;
+  transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  -moz-transition: ease 0.1s;
+  -ms-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
