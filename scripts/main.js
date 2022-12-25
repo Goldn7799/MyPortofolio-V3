@@ -1,5 +1,6 @@
 //setup
 var interfaceDefault = "dark";
+const API = "https://fac0-2404-c0-2c10-00-3872-7a4d.ap.ngrok.io";
 let keys = 0, key = 0, del = false, openingSub = true, closingSub = false, speed = 75, changeLock = false;
 //setup ELEMENT
 const nav = document.querySelector("nav");
@@ -143,7 +144,7 @@ setInterval(()=>{
       sdbar = false;
     };
   }
-  if (window.scrollY > 30){
+  if (window.scrollY > 25){
     if (sdbar){
       document.getElementById("sidebar").classList.remove("n-sidebar-show")
       sdbar = false;
@@ -151,6 +152,15 @@ setInterval(()=>{
   };
 }, 100)
 window.onload = ()=>{
+  fetch(`${API}/send`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      "act": true
+    })
+  })
 nav.classList.remove("n-gone")
 const MyName = "Syeif Sultoni Akbar"
 setTimeout(()=>{
@@ -431,3 +441,21 @@ const sidebar = ()=>{
   }
 }
 //end sidebar
+
+// view
+const total = document.getElementById("total");
+
+const updates = ()=>{
+  fetch(`${API}/MyPortofolio`, {method: "GET"}).then(ress => { return ress.json() }).then(res =>{
+    total.innerText = `Di Lihat ${res.total} Kali`
+    setTimeout(()=>{
+      updates()
+    }, 5000)
+  }).catch((err)=>{
+    total.innerText = `Server Time Out ${err}`
+    setTimeout(()=>{
+      updates()
+    }, 5000)
+  })
+}
+updates()
