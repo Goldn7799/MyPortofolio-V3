@@ -3,7 +3,6 @@ var interfaceDefault = "dark";
 const API = "https://5e42-114-5-211-251.ap.ngrok.io";
 let keys = 0, key = 0, del = false, openingSub = true, closingSub = false, speed = 75, changeLock = false;
 //setup ELEMENT
-window.overflowX = "hidden";
 const nav = document.querySelector("nav");
 const body = document.querySelector("body");
 const names = document.getElementById("names");
@@ -368,6 +367,21 @@ const ups = new IntersectionObserver(entries => {
 });
 
 ups.observe(document.getElementById("perkenalan"));
+
+const upsc = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      upup.style.left = "0"
+      upup.style.marginLeft = "15px"
+      return;
+    }
+
+    upup.style.left = ""
+    upup.style.marginLeft = ""
+  });
+});
+
+upsc.observe(document.getElementById("copyright"));
 
 // Remove the transition class
 const skill = document.querySelector('.skill-anim');
