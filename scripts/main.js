@@ -1,6 +1,6 @@
 //setup
 var interfaceDefault = "dark";
-const API = "https://fac0-2404-c0-2c10-00-3872-7a4d.ap.ngrok.io";
+const API = "https://5e42-114-5-211-251.ap.ngrok.io";
 let keys = 0, key = 0, del = false, openingSub = true, closingSub = false, speed = 75, changeLock = false;
 //setup ELEMENT
 const nav = document.querySelector("nav");
