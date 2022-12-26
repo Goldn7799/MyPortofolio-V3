@@ -21,7 +21,12 @@ body {
   -ms-transition: ease-in 0.5s;
   -o-transition: ease-in 0.5s;
   overflow-x: hidden;
+  /* overflow-y: scroll; */
+  scroll-behavior: smooth;
+}
+html {
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -221,9 +226,7 @@ body {
 
 #upup {
   transition: all 0.25s;
-  /*background-color: #00000000;
-  */align-items: center;
-  text-align: center;
+  /*background-color: #00000000;*/
   bottom: 0;
   border-radius: 20%;
   position: fixed;
