@@ -115,6 +115,7 @@ body {
 
 
 .n-about table tr td img {
+  transform: translateZ(20px);
   margin-top: 10px;
   border-radius: 20%;
   max-width: 150px;
@@ -123,6 +124,10 @@ body {
   -moz-border-radius: 20%;
   -ms-border-radius: 20%;
   -o-border-radius: 20%;
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
 }
 
 .n-about table tr td p {
@@ -144,6 +149,11 @@ body {
   -moz-transition: ease 2.5s;
   -ms-transition: ease 2.5s;
   -o-transition: ease 2.5s;
+}
+
+.about {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 .n-skills {
@@ -429,3 +439,4 @@ body {
 .n-sosmed:hover{
   box-shadow: 0px 0px 10px 5px #888888;
 }
+
