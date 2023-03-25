@@ -212,7 +212,7 @@ const runs = ()=>{
         del = false;
         text = text2;
         texts.innerText = ""
-        setTimeout(()=>{ runs() }, 100)
+        setTimeout(()=>{ runs(); cursors.classList.remove("cursors") }, 100)
       }, 500)
     }else if (key === 0&&text === sub1){
       clearInterval(runStop);
@@ -227,7 +227,8 @@ const runs = ()=>{
       if(key == text.length){
         del = true;
         clearInterval(runStop);
-        setTimeout(()=>{ runs() }, 1000)
+        cursors.classList.add("cursors");
+        setTimeout(()=>{ runs(); cursors.classList.remove("cursors") }, 1000)
       };
       if(del&&key < 1){
         del = false;
@@ -275,7 +276,8 @@ const runSubb = ()=>{
       if (key == text.length){
         del = true;
         clearInterval(runSub);
-        setTimeout(()=>{ runSubb() }, 1000)
+        cursors.classList.add("cursors")
+        setTimeout(()=>{ runSubb(); cursors.classList.remove("cursors") }, 1000)
       };
       if(del&&key < 1){
         del = false;
